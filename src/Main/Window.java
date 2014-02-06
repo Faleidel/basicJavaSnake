@@ -17,7 +17,7 @@ import javax.swing.JPanel;
 
 public class Window extends JFrame implements KeyListener , ActionListener
 {
-	private final Timer timer = new Timer( 10 , this );
+	private final Timer timer = new Timer( 30 , this );
 	
 	public ArrayList<Point> player;
 	public int lastDir = 3;
@@ -129,6 +129,8 @@ public class Window extends JFrame implements KeyListener , ActionListener
 	@Override
 	public void actionPerformed(ActionEvent e)
 	{
+		//This is the main update
+		
 		if ( gameStatus == 1 )
 		{
 			updatePlayer();
